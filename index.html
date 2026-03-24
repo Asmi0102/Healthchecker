@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioHealth Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="brand">BioHealth Assistant</div>
+      <ul class="nav-links">
+        <li><a href="#bmi">BMI Calculator</a></li>
+        <li><a href="#blood">Blood Compatibility</a></li>
+        <li><a href="#symptoms">Symptom Checker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- BMI Calculator Card -->
+    <section id="bmi" class="card section">
+      <h2 class="section-title">BMI Calculator</h2>
+      <div class="card-content">
+        <div class="form-row">
+          <label for="height">Height (meters)</label>
+          <input id="height" type="number" step="0.01" min="0" placeholder="e.g. 1.75" />
+        </div>
+        <div class="form-row">
+          <label for="weight">Weight (kg)</label>
+          <input id="weight" type="number" step="0.1" min="0" placeholder="e.g. 70" />
+        </div>
+        <button id="btn-calculate-bmi" class="btn">Calculate BMI</button>
+        <div id="bmi-result" class="result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Blood Compatibility Card -->
+    <section id="blood" class="card section">
+      <h2 class="section-title">Blood Group Compatibility Checker</h2>
+      <div class="card-content">
+        <div class="form-row">
+          <label for="donor">Donor blood group</label>
+          <select id="donor">
+            <option value="O-">O-</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="A+">A+</option>
+            <option value="B-">B-</option>
+            <option value="B+">B+</option>
+            <option value="AB-">AB-</option>
+            <option value="AB+">AB+</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="receiver">Receiver blood group</label>
+          <select id="receiver">
+            <option value="O-">O-</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="A+">A+</option>
+            <option value="B-">B-</option>
+            <option value="B+">B+</option>
+            <option value="AB-">AB-</option>
+            <option value="AB+">AB+</option>
+          </select>
+        </div>
+        <button id="btn-check-blood" class="btn">Check Compatibility</button>
+        <div id="blood-result" class="result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Symptom Checker Card -->
+    <section id="symptoms" class="card section">
+      <h2 class="section-title">Disease Symptom Checker</h2>
+      <div class="card-content">
+        <div class="symptoms-grid">
+          <label class="checkbox-item"><input type="checkbox" value="Fever" /> Fever</label>
+          <label class="checkbox-item"><input type="checkbox" value="Cough" /> Cough</label>
+          <label class="checkbox-item"><input type="checkbox" value="Headache" /> Headache</label>
+          <label class="checkbox-item"><input type="checkbox" value="Fatigue" /> Fatigue</label>
+          <label class="checkbox-item"><input type="checkbox" value="Runny Nose" /> Runny Nose</label>
+          <label class="checkbox-item"><input type="checkbox" value="Sore Throat" /> Sore Throat</label>
+          <label class="checkbox-item"><input type="checkbox" value="Body Pain" /> Body Pain</label>
+          <label class="checkbox-item"><input type="checkbox" value="Sneezing" /> Sneezing</label>
+          <label class="checkbox-item"><input type="checkbox" value="Vomiting" /> Vomiting</label>
+          <label class="checkbox-item"><input type="checkbox" value="Nausea" /> Nausea</label>
+          <label class="checkbox-item"><input type="checkbox" value="Diarrhea" /> Diarrhea</label>
+          <label class="checkbox-item"><input type="checkbox" value="Abdominal Pain" /> Abdominal Pain</label>
+          <label class="checkbox-item"><input type="checkbox" value="Dizziness" /> Dizziness</label>
+          <label class="checkbox-item"><input type="checkbox" value="Shortness of Breath" /> Shortness of Breath</label>
+          <label class="checkbox-item"><input type="checkbox" value="Itchy Eyes" /> Itchy Eyes</label>
+          <label class="checkbox-item"><input type="checkbox" value="Loss of Taste" /> Loss of Taste</label>
+          <label class="checkbox-item"><input type="checkbox" value="Loss of Smell" /> Loss of Smell</label>
+          <label class="checkbox-item"><input type="checkbox" value="Chest Pain" /> Chest Pain</label>
+          <label class="checkbox-item"><input type="checkbox" value="Rash" /> Rash</label>
+          <label class="checkbox-item"><input type="checkbox" value="Chills" /> Chills</label>
+          <label class="checkbox-item"><input type="checkbox" value="constipation" /> constipation</label>
+          
+        </div>
+        <button id="btn-check-disease" class="btn">Check Disease</button>
+        <div id="disease-result" class="result hidden" aria-live="polite"></div>
+        <div id="medicine-result" class="result hidden" aria-live="polite"></div>
+        <div id="tips-result" class="result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      This application is for educational purposes only and should not be used for real medical diagnosis. Always consult a healthcare professional.
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
