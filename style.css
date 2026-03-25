@@ -51,6 +51,9 @@ select{appearance:auto}
   .section-title{margin-left:6px}
 }
 
+/* Align nav items to the right beside the theme toggle */
+.nav-right{ display:flex; align-items:center; gap:14px; }
+
 /* Dark mode: basic color swaps */
 body.dark-mode{ background-color:#121212; color:#e5e5e5; }
 body.dark-mode nav.navbar{ background-color:#1f1f1f; }
