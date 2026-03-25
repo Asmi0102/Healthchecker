@@ -54,6 +54,31 @@ select{appearance:auto}
 /* Align nav items to the right beside the theme toggle */
 .nav-right{ display:flex; align-items:center; gap:14px; }
 
+/* Dark mode: extend to cards/boxes (BMI, Blood, Disease) */
+body.dark-mode .card,
+body.dark-mode .box,
+body.dark-mode .calculator-container,
+body.dark-mode .tool-box {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #333;
+}
+
+/* Ensure inputs within these sections switch to dark appearance */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+/* Ensure buttons remain visible in dark mode */
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
+
 /* Dark mode: basic color swaps */
 body.dark-mode{ background-color:#121212; color:#e5e5e5; }
 body.dark-mode nav.navbar{ background-color:#1f1f1f; }
