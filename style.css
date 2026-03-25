@@ -54,6 +54,13 @@ select{appearance:auto}
 /* Align nav items to the right beside the theme toggle */
 .nav-right{ display:flex; align-items:center; gap:14px; }
 
+/* Active state for navbar links based on scroll */
+nav .nav-links a.active{
+  color: #00bcd4;
+  font-weight: 600;
+  border-bottom: 2px solid #00bcd4;
+}
+
 /* Dark mode: extend to cards/boxes (BMI, Blood, Disease) */
 body.dark-mode .card,
 body.dark-mode .box,
