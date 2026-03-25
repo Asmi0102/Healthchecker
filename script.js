@@ -1,5 +1,36 @@
 // BioHealth Assistant - Pure frontend logic
 document.addEventListener('DOMContentLoaded', () => {
+  // Theme toggle: Dark/Light mode with persistence
+  const toggleBtn = document.getElementById('theme-toggle');
+  const DARK_CLASS = 'dark-mode';
+  const storageKey = 'theme';
+
+  function updateIcon(){
+    if (document.body.classList.contains(DARK_CLASS)){
+      toggleBtn.textContent = '☀️';
+      toggleBtn.setAttribute('aria-label', 'Switch to light mode');
+      toggleBtn.setAttribute('title', 'Switch to light mode');
+    } else {
+      toggleBtn.textContent = '🌙';
+      toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
+      toggleBtn.setAttribute('title', 'Switch to dark mode');
+    }
+  }
+
+  // Load saved theme on start
+  const saved = localStorage.getItem(storageKey);
+  if (saved === 'dark') {
+    document.body.classList.add(DARK_CLASS);
+  }
+
+  if (toggleBtn) {
+    updateIcon();
+    toggleBtn.addEventListener('click', function () {
+      const isDark = document.body.classList.toggle(DARK_CLASS);
+      localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
+      updateIcon();
+    });
+  }
   // BMI Calculator
   const heightInput = document.getElementById('height');
   const weightInput = document.getElementById('weight');
