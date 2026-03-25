@@ -31,6 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
       updateIcon();
     });
   }
+  // Scroll-based active navbar highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav .nav-links a');
+
+  function updateActiveLink() {
+    let current = '';
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    sections.forEach((sec) => {
+      const top = sec.offsetTop - 120;
+      if (scrollY >= top) {
+        current = sec.getAttribute('id');
+      }
+    });
+    navLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', current && href === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink);
+  // Initialize on load
+  window.addEventListener('load', updateActiveLink);
   // BMI Calculator
   const heightInput = document.getElementById('height');
   const weightInput = document.getElementById('weight');
