@@ -77,3 +77,24 @@ JavaScript (Vanilla JS)
 LocalStorage API
 
 No frameworks or external libraries are required.
+
+⚠️ Disclaimer
+
+This project is designed for educational and demonstration purposes only.
+
+The disease symptom checker does not provide medical diagnosis and should not replace professional healthcare advice.
+
+🔮 Future Improvements
+
+Possible enhancements:
+
+Add AI-based disease prediction
+Expand the symptom database
+Add user health history tracking
+Convert to a React-based application
+Add API integration for medical data
+📄 License
+
+This project is provided as-is for learning and demonstration purposes.
+
+You are free to use and modify it for personal or educational projects.
