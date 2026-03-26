@@ -93,6 +93,7 @@ Expand the symptom database
 Add user health history tracking
 Convert to a React-based application
 Add API integration for medical data
+
 📄 License
 
 This project is provided as-is for learning and demonstration purposes.
