@@ -10,6 +10,31 @@
   --radius: 14px;
 }
 
+/* Disease Prediction dark mode readability tweaks (section #symptoms) */
+body.dark-mode #symptoms,
+body.dark-mode #symptoms .section-title,
+body.dark-mode #symptoms .form-row label,
+body.dark-mode #symptoms .checkbox-item,
+body.dark-mode #symptoms .result,
+body.dark-mode #symptoms .btn,
+body.dark-mode #symptoms input,
+body.dark-mode #symptoms select,
+body.dark-mode #symptoms textarea {
+  color: #e5e5e5;
+}
+body.dark-mode #symptoms input,
+body.dark-mode #symptoms select,
+body.dark-mode #symptoms textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #e5e5e5;
+}
+
+/* Ensure the individual symptom rows have a dark background for readability */
+body.dark-mode #symptoms .checkbox-item {
+  background-color: #2a2a2a;
+}
+
 /* Polished UI enhancements */
 body{background: linear-gradient(135deg, #f6fbff 0%, #eef4ff 60%, #f7fffb 100%);}
 .site-header{backdrop-filter: saturate(1.2) blur(2px); -webkit-backdrop-filter: saturate(1.2) blur(2px);}
